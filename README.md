@@ -238,31 +238,39 @@ Wafer 계측 Output 연결
 Wafer 위치별 분포 확인
       ↓
 다음에 확인할 공정조건 선정
+---
 
-공정 데이터는 Input과 Output이 한 파일에 깔끔하게 정리되어 있다고 가정하기 어렵기 때문에
-분석 전에 어떤 조건이 바뀌었고 어떤 계측 결과와 연결되는지 정리하는 과정이 중요하다고 느꼈습니다.
+공정 데이터는 Input과 Output이 한 파일에 깔끔하게 정리되어 있다고 가정하기 어렵기 때문에,  
+분석 전에 **어떤 조건이 바뀌었고 어떤 계측 결과와 연결되는지 정리하는 과정**이 중요하다고 느꼈습니다.
 
+---
 
 # 5. Next experiment
 
-앞선 분석 결과를 바탕으로 다음 실험을 설계한다면
-한 번에 여러 조건을 임의로 변경하기보다
-변수별 영향을 구분할 수 있도록 Split을 구성하는 방향이 적절하다고 판단했습니다.
+앞선 분석 결과를 바탕으로 다음 실험을 설계한다면,  
+한 번에 여러 조건을 임의로 변경하기보다 **변수별 영향을 구분할 수 있도록 Split을 구성하는 방향**이 적절하다고 판단했습니다.
+
 예를 들어,
+
 - 평균 두께 조정 → Process Time
 - 증착량 / Deposition rate 변화 확인 → Si2H6 flow, RF Power
 - wafer 내 분포 변화 확인 → Temperature
-처럼 기존 데이터에서 확인된 경향을 바탕으로
+
+처럼 기존 데이터에서 확인된 경향을 바탕으로  
 다음 실험에서 우선 확인할 변수를 좁힐 수 있습니다.
-이 단계에서 제안하는 조건은 기존 데이터의 경향을 이용한 후속 실험 후보이며,
+
+이 단계에서 제안하는 조건은 기존 데이터의 경향을 이용한 **후속 실험 후보**이며,  
 실제로 같은 결과가 재현되는지는 추가 Split 실험을 통해 확인해야 합니다.
 
+---
 
-What I learned
+# What I learned
 
-이번 프로젝트를 통해 단순한 데이터 시각화보다
-분석 목적에 맞게 데이터를 나누고 연결하는 과정이 더 중요하다는 점을 배웠습니다.
+이번 프로젝트를 통해 단순한 데이터 시각화보다  
+**분석 목적에 맞게 데이터를 나누고 연결하는 과정**이 더 중요하다는 점을 배웠습니다.
+
 특히 다음 과정을 직접 정리했습니다.
+
 - 공정 구간과 ramp-up 구간 분리
 - Run별 설비 센서 비교
 - Recipe Input과 계측 Output 매칭
@@ -270,25 +278,42 @@ What I learned
 - 평균값과 산포를 함께 확인
 - wafer-level 위치 분포 시각화
 - 분석 결과를 다음 실험 조건과 연결
+
 결과적으로 공정 데이터를 보고
-어떤 조건에서 차이가 발생했는지
-어떤 변수를 먼저 확인해야 하는지
-다음 실험에서는 무엇을 바꿔볼지
+
+- 어떤 조건에서 차이가 발생했는지
+- 어떤 변수를 먼저 확인해야 하는지
+- 다음 실험에서는 무엇을 바꿔볼지
 
 를 데이터 기준으로 좁혀보는 연습을 할 수 있었습니다.
 
+---
 
-Repository structure
+# Repository structure
 
+```text
 analysis/  Reproducible Jupyter notebooks
 data/      Aggregated educational sample data
 images/    Analysis figures
 src/       Source loading and calculation functions
 tests/     Calculation, build, and privacy checks
+```
 
+---
 
+# Run locally
 
-Tools
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
+
+`analysis` 폴더의 노트북을 위에서 아래로 실행하면  
+분석에 사용한 표와 그래프를 재현할 수 있습니다.
+
+---
+
+# Tools
 
 - Python
 - pandas
@@ -298,8 +323,10 @@ Tools
 - Jupyter Notebook
 - Excel
 
+---
 
-Data
+# Data
 
 공개 저장소에는 교육용 공정 데이터를 바탕으로 재구성한 집계·샘플 데이터만 포함했습니다.
-분석 목적은 공정·설비 데이터를 전처리하고 조건별 차이를 해석하는 분석 과정을 구현하는 것입니다.
+
+분석 목적은 **공정·설비 데이터를 전처리하고 조건별 차이를 해석하는 분석 과정을 구현하는 것**입니다.
