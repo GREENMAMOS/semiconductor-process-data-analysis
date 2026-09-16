@@ -102,7 +102,8 @@ jupyter notebook
 | [05](analysis/05_follow_up_experiment.ipynb) | Run19 선정·온도/시간 계산·9개 Split |
 
 ## PPT
-[📎 Manufacturing Data & AI Portfolio (PPT)](./Jiwon_Yoo_Manufacturing_Data_AI_Portfolio.pptx)
+- [📄 View Portfolio (PDF)](./Jiwon_Yoo_Manufacturing_Data_AI_Portfolio.pdf)
+- [📊 Download Portfolio (PPTX)](./Jiwon_Yoo_Manufacturing_Data_AI_Portfolio.pptx)
 
 ## 저장소 구성
 
