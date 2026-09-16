@@ -1,0 +1,2 @@
+reference_uniformity_pct,baseline_uniformity_pct,relative_uniformity_reduction_pct,temperature_drop_c,calculated_temperature_c,rate_reduction_pct,expected_average_at_base_time_a,calculated_time_sec,applied_temperature_c,applied_time_sec,predicted_average_a,predicted_uniformity_pct
+8.571428571,9.918241867,13.57915358,65.28439222,234.7156078,9.40095248,2848.323116,55.29569279,234.7,55,3481.197448,8.571106584
